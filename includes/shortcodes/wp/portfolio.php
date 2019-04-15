@@ -14,7 +14,6 @@ function shortcode_portfolio($atts, $content = null) {
 		"show_filters" 				=> 'yes',
 		"order_by" 					=> 'date',
 		"order" 					=> 'desc',
-		"grid" 						=> 'default',
 		"portfolio_items_per_row" 	=> '3'
 	), $atts));
 	ob_start();
@@ -51,11 +50,7 @@ function shortcode_portfolio($atts, $content = null) {
 	
 		$portfolio_categories_queried = array_unique($portfolio_categories_queried);
 		
-		if ($grid == "default") {
-			$items_per_row_class = ' default_grid items_per_row_'."$portfolio_items_per_row";
-		} else {
-			$items_per_row_class = '';
-		}
+	    $items_per_row_class = ' default_grid items_per_row_'.$portfolio_items_per_row;
 		
 		?>
 	    
@@ -68,7 +63,7 @@ function shortcode_portfolio($atts, $content = null) {
 				
 				if ( !empty( $portfolio_categories_queried ) && !is_wp_error( $portfolio_categories_queried ) ){
 	                echo '<ul class="filters-group list-centered">';
-	                    echo '<li class="filter-item is-checked" data-filter="*">' . __("Show all", "mrtailor-portfolio") . '</li>';
+	                    echo '<li class="filter-item is-checked" data-filter="*">' . __("Show all", "mr_tailor") . '</li>';
 	                foreach ( $portfolio_categories_queried as $key => $value ) {
 	                    echo '<li class="filter-item" data-filter=".' . $key . '">' . $value . '</li>';
 	                }
@@ -109,93 +104,10 @@ function shortcode_portfolio($atts, $content = null) {
 	                    } else {
 	                        $portfolio_color_option = "none";
 	                    }
-						
-						$portfolio_item_width = "";
-						$portfolio_item_height = "";
-						
-						switch ($grid) {
-							
-							case "grid1":							
-								
-								switch ($post_counter) {
-									case (($post_counter == 1)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "height2";
-										break;
-									case (($post_counter == 2)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									case (($post_counter == 7)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									case (($post_counter == 8)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "height2";
-										break;
-									default :
-										$portfolio_item_width = "";
-										$portfolio_item_height = "";
-								}							
-								break;
-								
-							case "grid2":
-								
-								switch ($post_counter) {
-									case (($post_counter == 3)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "height2";
-										break;
-									case (($post_counter == 8)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									case (($post_counter == 13)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									default :
-										$portfolio_item_width = "";
-										$portfolio_item_height = "";
-								}							
-								break;
-								
-							case "grid3":
-							
-								switch ($post_counter) {
-									case (($post_counter == 3)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									case (($post_counter == 8)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									case (($post_counter == 11)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									case (($post_counter == 14)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									default :
-										$portfolio_item_width = "";
-										$portfolio_item_height = "";
-								}							
-								break;
-								
-							default:
-								
-								$portfolio_item_width = "";
-								$portfolio_item_height = "";
-								
-						}
 	                    
 	                ?>
 
-	                    <div class="portfolio-box hidden <?php echo esc_html($portfolio_item_width); ?> <?php echo esc_html($portfolio_item_height); ?> <?php echo esc_html($term_slug_class); ?>">
+	                    <div class="portfolio-box hidden <?php echo esc_html($term_slug_class); ?>">
 	                        
 	                        <a href="<?php echo get_permalink(get_the_ID()); ?>" class="portfolio-box-inner hover-effect-link" style="background-color:<?php echo esc_html($portfolio_color_option); ?>">
 	                            

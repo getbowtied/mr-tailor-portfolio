@@ -136,7 +136,6 @@ jQuery(document).ready(function ($) {
 
     $(window).resize(function(){
 
-    	//portfolio isotope
         if ( $('.portfolio-isotope-container').length ) {
            
             var $portfolio_grid_on_resize;
@@ -157,7 +156,6 @@ jQuery(document).ready(function ($) {
 				resizeIsotopeEnd();
            
             }
-			
         }
     });
 

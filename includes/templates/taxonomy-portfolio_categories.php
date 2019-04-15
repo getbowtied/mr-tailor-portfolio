@@ -81,98 +81,14 @@
 							$portfolio_color_option = get_post_meta( $post->ID, 'portfolio_color_meta_box', true );
 						} else {
 							$portfolio_color_option = "none";
-						}
-						
-						$portfolio_item_width = "";
-						$portfolio_item_height = "";
-						
-						switch ($grid) {
-							
-							case "grid1":							
-								
-								switch ($post_counter) {
-									case (($post_counter == 1)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "height2";
-										break;
-									case (($post_counter == 2)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									case (($post_counter == 7)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									case (($post_counter == 8)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "height2";
-										break;
-									default :
-										$portfolio_item_width = "";
-										$portfolio_item_height = "";
-								}							
-								break;
-								
-							case "grid2":
-								
-								switch ($post_counter) {
-									case (($post_counter == 3)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "height2";
-										break;
-									case (($post_counter == 8)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									case (($post_counter == 13)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									default :
-										$portfolio_item_width = "";
-										$portfolio_item_height = "";
-								}							
-								break;
-								
-							case "grid3":
-							
-								switch ($post_counter) {
-									case (($post_counter == 3)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									case (($post_counter == 8)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									case (($post_counter == 11)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									case (($post_counter == 14)) :
-										$portfolio_item_width = "width2";
-										$portfolio_item_height = "";
-										break;
-									default :
-										$portfolio_item_width = "";
-										$portfolio_item_height = "";
-								}							
-								break;
-								
-							default:
-								
-								$portfolio_item_width = "";
-								$portfolio_item_height = "";
-								
-						}
-						
+						}						
 					?>
 	
-						<div class="portfolio-box hidden <?php echo esc_attr( $portfolio_item_width ); ?> <?php echo esc_attr( $portfolio_item_height ); ?> <?php echo esc_attr( $term_slug_class ); ?>">
+						<div class="portfolio-box hidden <?php echo esc_attr( $term_slug_class ); ?>">
 							
-							<a href="<?php echo get_permalink(get_the_ID()); ?>" class="portfolio-box-inner hover-effect-link">
+							<a href="<?php echo get_permalink(get_the_ID()); ?>" class="portfolio-box-inner hover-effect-link" style="background-color:<?php echo esc_html($portfolio_color_option); ?>">
 								
-								<span class="portfolio-content-wrapper hover-effect-content" style="background-color:<?php echo esc_html($portfolio_color_option); ?>">
+								<span class="portfolio-content-wrapper hover-effect-content">
 									
 									<?php if ($related_thumb[0] != "") : ?>
 										<span class="portfolio-thumb hover-effect-thumb" style="background-image: url(<?php echo esc_url($related_thumb[0]); ?>)"></span>

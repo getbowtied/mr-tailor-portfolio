@@ -17,12 +17,12 @@
 	},
 	
 	"icons" : {
-		"1x" : "https://raw.githubusercontent.com/getbowtied/mrtailor-portfolio/master/core/updater/assets/images/mr-tailor-portfolio-128x128.png",
-		"2x" : "https://raw.githubusercontent.com/getbowtied/mrtailor-portfolio/master/core/updater/assets/images/mr-tailor-portfolio-256x256.png"
+		"1x" : "https://raw.githubusercontent.com/getbowtied/mr-tailor-portfolio/master/core/updater/assets/images/mr-tailor-portfolio-128x128.png",
+		"2x" : "https://raw.githubusercontent.com/getbowtied/mr-tailor-portfolio/master/core/updater/assets/images/mr-tailor-portfolio-256x256.png"
     },
 
 	"banners": {
-		"low": "https://raw.githubusercontent.com/getbowtied/mrtailor-portfolio/master/core/updater/assets/images/mr-tailor-portfolio-772x250.png",
-		"high": "https://raw.githubusercontent.com/getbowtied/mrtailor-portfolio/master/core/updater/assets/images/mr-tailor-portfolio-1544x500.png"
+		"low": "https://raw.githubusercontent.com/getbowtied/mr-tailor-portfolio/master/core/updater/assets/images/mr-tailor-portfolio-772x250.png",
+		"high": "https://raw.githubusercontent.com/getbowtied/mr-tailor-portfolio/master/core/updater/assets/images/mr-tailor-portfolio-1544x500.png"
 	}
 }

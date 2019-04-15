@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mr. Tailor Portfolio\n"
-"POT-Creation-Date: 2019-04-03 14:14+0300\n"
+"POT-Creation-Date: 2019-04-15 12:23+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -21,73 +21,73 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: core\n"
 
-#: includes/blocks/portfolio/block.js:22 includes/portfolio/post-type.php:10
-#: includes/portfolio/post-type.php:22 mrtailor-portfolio.php:121
+#: includes/blocks/portfolio/block.js:26 includes/portfolio/post-type.php:10
+#: includes/portfolio/post-type.php:22 mrtailor-portfolio.php:107
 msgid "Portfolio"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:32
+#: includes/blocks/portfolio/block.js:36
 msgid "Equal Boxes"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:33
+#: includes/blocks/portfolio/block.js:37
 msgid "Masonry Style V1"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:34
+#: includes/blocks/portfolio/block.js:38
 msgid "Masonry Style V2"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:35
+#: includes/blocks/portfolio/block.js:39
 msgid "Masonry Style V3"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:211
+#: includes/blocks/portfolio/block.js:217
 msgid "Update"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:213
+#: includes/blocks/portfolio/block.js:219
 msgid "Updating"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:430
+#: includes/blocks/portfolio/block.js:436
 msgid "Categories:"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:445
+#: includes/blocks/portfolio/block.js:451
 msgid "Alphabetical Ascending"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:446
+#: includes/blocks/portfolio/block.js:452
 msgid "Alphabetical Descending"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:447
+#: includes/blocks/portfolio/block.js:453
 msgid "Date Ascending"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:448
+#: includes/blocks/portfolio/block.js:454
 msgid "Date Descending"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:450
+#: includes/blocks/portfolio/block.js:456
 msgid "Order By"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:469
+#: includes/blocks/portfolio/block.js:475
 msgid "Number of Portfolio Items"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:495
+#: includes/blocks/portfolio/block.js:501
 msgid "Show Filters?"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:511
+#: includes/blocks/portfolio/block.js:517
 msgid "Columns"
 msgstr ""
 
 #: includes/blocks/portfolio/block.php:111
-#: includes/shortcodes/wp/portfolio.php:71
+#: includes/shortcodes/wp/portfolio.php:66
 msgid "Show all"
 msgstr ""
 
@@ -183,11 +183,11 @@ msgstr ""
 msgid "No Portfolio Category found."
 msgstr ""
 
-#: mrtailor-portfolio.php:138
-msgid "Portfolio Item Slug"
+#: mrtailor-portfolio.php:124
+msgid "Portfolio Posts Slug"
 msgstr ""
 
-#: mrtailor-portfolio.php:139
+#: mrtailor-portfolio.php:125
 msgid ""
 "<span class=\"dashicons dashicons-editor-help\"></span>Default slug is "
 "\"portfolio-item\". Enter a custom one to overwrite it. <br/><b>You need to "

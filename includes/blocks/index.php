@@ -5,7 +5,7 @@
 //==============================================================================
 add_action( 'enqueue_block_editor_assets', function() {
 	wp_enqueue_style(
-		'getbowtied-sk-blocks-editor-styles',
+		'getbowtied-mt-product-blocks-editor-styles',
 		plugins_url( 'assets/css/editor.css', __FILE__ ),
 		array( 'wp-edit-blocks' )
 	);
@@ -16,7 +16,7 @@ add_action( 'enqueue_block_editor_assets', function() {
 //==============================================================================
 add_action( 'enqueue_block_editor_assets', function() {
     wp_enqueue_script(
-	'getbowtied-sk-blocks-editor-scripts',
+	'getbowtied-mt-product-blocks-editor-scripts',
 		plugins_url( 'assets/js/main.js', __FILE__ ),
 		array( 'wp-blocks', 'jquery' )
 	);

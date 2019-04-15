@@ -24,12 +24,12 @@ $output_categories = array();
 $output_categories["All"] = "";
 
 foreach($categories as $category) { 
-	$output_categories[wp_specialchars_decode($category->name)] = $category->slug;
+	$output_categories[htmlspecialchars_decode($category->name)] = $category->slug;
 }
 
 vc_map(array(
    "name"			=> "Portfolio",
-   "category"		=> 'Content',
+   "category"		=> "Mr. Tailor",
    "description"	=> "Place Portfolio",
    "base"			=> "portfolio",
    "class"			=> "",
@@ -45,6 +45,7 @@ vc_map(array(
 			"admin_label" 	=> true,
 			"heading"		=> "How many portfolio items would you like to show?",
 			"param_name"	=> "items",
+			"value"			=> "999",
 		),
 		
 		array(
@@ -102,21 +103,6 @@ vc_map(array(
 			"holder"		=> "div",
 			"class" 		=> "hide_in_vc_editor",
 			"admin_label" 	=> true,
-			"heading"		=> "Grid Layout Styles",
-			"param_name"	=> "grid",
-			"value"			=> array(
-				"Default - Equal Boxes"		=> "default",
-				"Masonry Style - V1"		=> "grid1",
-				"Masonry Style - V2"		=> "grid2",
-				"Masonry Style - V3"		=> "grid3"
-			),
-		),
-		
-		array(
-			"type"			=> "dropdown",
-			"holder"		=> "div",
-			"class" 		=> "hide_in_vc_editor",
-			"admin_label" 	=> true,
 			"heading"		=> "Items per Row",
 			"param_name"	=> "portfolio_items_per_row",
 			"value"			=> array(
@@ -124,7 +110,6 @@ vc_map(array(
 				"4"	=> "4",
 				"5"	=> "5"
 			),
-			"dependency" 	=> Array('element' => "grid", 'value' => array('default'))
 		),
    )
    
