@@ -33,6 +33,8 @@ function shortcode_portfolio($atts, $content = null) {
 	);
 	
 	$portfolioItems = new WP_Query( $args );
+
+	$portfolio_categories_queried = array();
 	
 	while ( $portfolioItems->have_posts() ) : $portfolioItems->the_post();
 		
