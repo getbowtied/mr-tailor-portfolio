@@ -259,6 +259,6 @@ endif;
 
 $theme = wp_get_theme();
 $parent_theme = $theme->parent();
-if( $theme->template == 'mrtailor' && ( $theme->version >= '2.8.10' || ( !empty($parent_theme) && $parent_theme->version >= '2.8.10' ) ) ) {
+if( $theme->template == 'mrtailor' && ( $theme->version >= '2.9' || ( !empty($parent_theme) && $parent_theme->version >= '2.9' ) ) ) {
 	$mrtailor_portfolio = new MrTailorPortfolio;
 }
