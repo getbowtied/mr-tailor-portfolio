@@ -10,7 +10,7 @@
  * Text Domain:				mr-tailor-portfolio
  * Domain Path:				/languages/
  * Requires at least: 		5.0
- * Tested up to: 			5.1.1
+ * Tested up to: 			5.2.1
  *
  * @package  Mr. Tailor Portfolio
  * @author   GetBowtied

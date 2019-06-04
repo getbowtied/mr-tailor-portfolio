@@ -1,7 +1,7 @@
 === Mr. Tailor Portfolio Addon ===
 Contributors: getbowtied, vanesareinerth, adrianlbs
 Requires at least: 5.0
-Tested up to: 5.1.1
+Tested up to: 5.2.1
 Stable tag: 1.0
 Requires PHP: 5.5.0
 License: GNU General Public License v3.0

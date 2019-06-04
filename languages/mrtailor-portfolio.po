@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mr. Tailor Portfolio\n"
-"POT-Creation-Date: 2019-04-15 12:23+0300\n"
+"POT-Creation-Date: 2019-06-04 11:18+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,7 +17,7 @@ msgstr ""
 "esc_html_e;esc_html_x:1,2c;i18n;i18n.__\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: core\n"
 
@@ -87,7 +87,7 @@ msgid "Columns"
 msgstr ""
 
 #: includes/blocks/portfolio/block.php:111
-#: includes/shortcodes/wp/portfolio.php:66
+#: includes/shortcodes/wp/portfolio.php:68
 msgid "Show all"
 msgstr ""
 
