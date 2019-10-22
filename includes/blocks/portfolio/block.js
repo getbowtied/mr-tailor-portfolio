@@ -3,7 +3,8 @@
 	const el = element.createElement;
 
 	/* Blocks */
-	const registerBlockType   	= blocks.registerBlockType;
+	const registerBlockType = blocks.registerBlockType;
+	const apiFetch = wp.apiFetch;
 
 	const {
 		TextControl,
@@ -17,9 +18,7 @@
 
 	const {
 		InspectorControls,
-	} = wp.editor;
-
-	const apiFetch 				= wp.apiFetch;
+	} = wp.blockEditor;
 
 	/* Register Block */
 	registerBlockType( 'getbowtied/mt-portfolio', {
@@ -136,9 +135,9 @@
 					case 'title_desc':
 						query += '&orderby=title&order=desc';
 						break;
-					default: 
+					default:
 						break;
-				}	
+				}
 
 				query += '&lang=' + portfolio_vars.language;
 
@@ -269,7 +268,7 @@
 					for ( let i = 0; i < portfolio_items.length; i++ ) {
 
 						let portfolio_image = [];
-						if ( portfolio_items[i]['fimg_url'] ) { 
+						if ( portfolio_items[i]['fimg_url'] ) {
 							portfolio_image.push(
 								el( 'span',
 									{
@@ -283,11 +282,11 @@
 								)
 							);
 						};
- 
+
 						postElements.push(
-							el( "div", 
+							el( "div",
 								{
-									key: 		'gbt_18_mt_editor_portfolio_item_box_' + portfolio_items[i].id, 
+									key: 		'gbt_18_mt_editor_portfolio_item_box_' + portfolio_items[i].id,
 									className: 	'gbt_18_mt_editor_portfolio_item_box'
 								},
 								el( 'a',
@@ -299,9 +298,9 @@
 											backgroundColor: portfolio_items[i]['color_meta_box']
 										}
 									},
-									el( "div", 
+									el( "div",
 										{
-											key: 		'gbt_18_mt_editor_portfolio_item_content', 
+											key: 		'gbt_18_mt_editor_portfolio_item_content',
 											className: 	'gbt_18_mt_editor_portfolio_item_content'
 										},
 										portfolio_image,
@@ -317,7 +316,7 @@
 							)
 						);
 					}
-				} 
+				}
 
 				wrapper.push(
 					el( 'div',
@@ -342,7 +341,7 @@
 				let options = [];
 				let optionsIDs = [];
 				let sorted = [];
-			
+
 				apiFetch({ path: '/wp/v2/portfolio-category?per_page=-1&lang=' + portfolio_vars.language }).then(function (categories) {
 
 				 	for( let i = 0; i < categories.length; i++) {
@@ -377,7 +376,7 @@
 										className: _categoryClassName( catArr[i].parent, catArr[i].value ) + ' ' + catArr[i].level,
 									},
 									el(
-									'input', 
+									'input',
 										{
 											type:  'checkbox',
 											key:   'category-checkbox-' + catArr[i].value,
@@ -400,7 +399,7 @@
 												props.setAttributes({ categoriesIDs: newCategoriesSelected });
 												props.setAttributes({ queryItems: _buildQuery(newCategoriesSelected, attributes.number, attributes.orderby) });
 											},
-										}, 
+										},
 									),
 									catArr[i].label,
 									el(
@@ -412,11 +411,11 @@
 								renderCategories( catArr[i].value, level+1)
 							),
 						);
-					} 
-				}	
+					}
+				}
 				if (categoryElements.length > 0 ) {
 					let wrapper = el('ul', {className: 'level-' + level}, categoryElements);
-					return wrapper;		
+					return wrapper;
 				} else {
 					return;
 				}
