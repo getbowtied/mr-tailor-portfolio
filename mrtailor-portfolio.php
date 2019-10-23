@@ -4,13 +4,13 @@
  * Plugin Name:       		Mr. Tailor Portfolio Addon
  * Plugin URI:        		https://mrtailor.wp-theme.design/
  * Description:       		Extends the functionality of your WordPress site by adding a 'Portfolio' custom post type allowing you to organize and showcase you your work or products.
- * Version:           		1.0
+ * Version:           		1.1
  * Author:            		GetBowtied
  * Author URI:				https://getbowtied.com
  * Text Domain:				mr-tailor-portfolio
  * Domain Path:				/languages/
  * Requires at least: 		5.0
- * Tested up to: 			5.2.1
+ * Tested up to: 			5.2.4
  *
  * @package  Mr. Tailor Portfolio
  * @author   GetBowtied
@@ -115,11 +115,11 @@ if ( ! class_exists( 'MrTailorPortfolio' ) ) :
 				'default'     			=> 'portfolio-item',
 			) );
 
-			$wp_customize->add_control( 
+			$wp_customize->add_control(
 				new WP_Customize_Control(
 					$wp_customize,
 					'mt_portfolio_slug',
-					array( 
+					array(
 						'type'			=> 'text',
 						'label'       	=> esc_attr__( 'Portfolio Posts Slug', 'mr-tailor-portfolio' ),
 						'description' 	=> __('<span class="dashicons dashicons-editor-help"></span>Default slug is "portfolio-item". Enter a custom one to overwrite it. <br/><b>You need to regenerate your permalinks if you modify this!</b>', 'mr-tailor-portfolio'),
@@ -147,7 +147,7 @@ if ( ! class_exists( 'MrTailorPortfolio' ) ) :
 		 * @return void
 		*/
 		public static function gbt_add_metabox() {
-			
+
 			include_once( 'includes/portfolio/metabox.php' );
 		}
 
@@ -182,8 +182,8 @@ if ( ! class_exists( 'MrTailorPortfolio' ) ) :
 		public static function gbt_register_styles() {
 			add_action( 'wp_enqueue_scripts', function() {
 				wp_enqueue_style(
-					'gbt-mt-portfolio-styles', 
-					plugins_url( 'includes/assets/css/portfolio.css', __FILE__ ), 
+					'gbt-mt-portfolio-styles',
+					plugins_url( 'includes/assets/css/portfolio.css', __FILE__ ),
 					NULL
 				);
 			} );
@@ -198,7 +198,7 @@ if ( ! class_exists( 'MrTailorPortfolio' ) ) :
 			add_action( 'wp_enqueue_scripts', function() {
 				wp_enqueue_script(
 					'gbt-mt-portfolio-scripts',
-					plugins_url( 'includes/assets/js/portfolio.js', __FILE__ ), 
+					plugins_url( 'includes/assets/js/portfolio.js', __FILE__ ),
 					array('jquery'),
 					false,
 					true
@@ -217,12 +217,12 @@ if ( ! class_exists( 'MrTailorPortfolio' ) ) :
 					global $post_type;
 					wp_enqueue_script(
 						'gbt-mt-portfolio-admin-scripts',
-						plugins_url( 'includes/assets/js/wp-admin-portfolio.js', __FILE__ ), 
-						array('wp-color-picker'), 
+						plugins_url( 'includes/assets/js/wp-admin-portfolio.js', __FILE__ ),
+						array('wp-color-picker'),
 						false
 					);
 				} );
-			}			
+			}
 		}
 
 		/**
@@ -232,9 +232,9 @@ if ( ! class_exists( 'MrTailorPortfolio' ) ) :
 		*/
 		public static function gbt_mt_portfolio_template( $template ) {
 			global $post;
-			
+
 			if ( $post->post_type == 'portfolio' ) {
-				$template = plugin_dir_path(__FILE__) . 'includes/templates/single-portfolio.php';		        
+				$template = plugin_dir_path(__FILE__) . 'includes/templates/single-portfolio.php';
 		    }
 
 		    return $template;
