@@ -304,7 +304,7 @@
 											className: 	'gbt_18_mt_editor_portfolio_item_content'
 										},
 										portfolio_image,
-										el( 'h2',
+										el( 'h4',
 											{
 												key: 'gbt_18_mt_editor_portfolio_item_title',
 												className: 'gbt_18_mt_editor_portfolio_item_title',
