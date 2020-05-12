@@ -36,52 +36,54 @@ get_header();
                 <?php endwhile; // end of the loop. ?>
 
 				<div class="row">
-					<div class="large-8 large-centered columns portfolio_content_nav">
-						<?php
-						$post_navigation = array(
-							'previous' => array(
-								'class' => 'previous',
-								'post' 	=> get_previous_post(),
-								'text'	=> 'Previous Reading'
-							),
-							'next' => array(
-								'class' => 'next',
-								'post' 	=> get_next_post(),
-								'text' 	=> 'Next Reading'
-							)
-						);
+					<div class="portfolio_content_nav post-navigation">
+                        <div class="large-8 large-centered columns">
+    						<?php
+    						$post_navigation = array(
+    							'previous' => array(
+    								'class' => 'previous',
+    								'post' 	=> get_previous_post(),
+    								'text'	=> 'Previous Reading'
+    							),
+    							'next' => array(
+    								'class' => 'next',
+    								'post' 	=> get_next_post(),
+    								'text' 	=> 'Next Reading'
+    							)
+    						);
 
-						foreach( $post_navigation as $post_nav ) :
-						?>
-							<div class="large-6 medium-6 small-12 columns post-nav <?php echo wp_kses_post( $post_nav['class'] ); ?>-post-nav">
-								<?php if( !empty($post_nav['post']) ) { ?>
-									<a href="<?php echo esc_url(get_permalink($post_nav['post']->ID)); ?>" rel="prev">
-										<div class="nav-post-title">
-											<?php esc_html_e( $post_nav['text'], 'mr_tailor' ); ?>
-										</div>
+    						foreach( $post_navigation as $post_nav ) :
+    						?>
+    							<div class="large-6 medium-6 small-12 columns post-nav <?php echo wp_kses_post( $post_nav['class'] ); ?>-post-nav">
+    								<?php if( !empty($post_nav['post']) ) { ?>
+    									<a href="<?php echo esc_url(get_permalink($post_nav['post']->ID)); ?>" rel="prev">
+    										<div class="nav-post-title">
+    											<?php esc_html_e( $post_nav['text'], 'mr_tailor' ); ?>
+    										</div>
 
-										<div class="previous-post-info">
-											<div class="entry-thumbnail">
-												<?php echo get_the_post_thumbnail( $post_nav['post']->ID, 'large' ); ?>
-												<span class="more-link"><?php esc_html_e('Continue reading', 'mr_tailor'); ?><span class="arrow-icon"></span></span>
-											</div>
+    										<div class="previous-post-info">
+    											<div class="entry-thumbnail">
+    												<?php echo get_the_post_thumbnail( $post_nav['post']->ID, 'large' ); ?>
+    												<span class="more-link"><?php esc_html_e('Continue reading', 'mr_tailor'); ?><span class="arrow-icon"></span></span>
+    											</div>
 
-											<h2 class="post-title">
-												<?php echo $post_nav['post']->post_title; ?>
-											</h2>
-										</div>
-									</a>
+    											<h2 class="post-title">
+    												<?php echo $post_nav['post']->post_title; ?>
+    											</h2>
+    										</div>
+    									</a>
 
-									<div class="post_header_date">
-										<?php echo get_the_date( 'F j, Y', $post_nav['post']->ID ); ?>
-									</div>
+    									<div class="post_header_date">
+    										<?php echo get_the_date( 'F j, Y', $post_nav['post']->ID ); ?>
+    									</div>
 
-									<div class="post_excerpt">
-										<p><?php echo get_the_excerpt( $post_nav['post']->ID ); ?></p>
-									</div>
-								<?php } ?>
-							</div>
-						<?php endforeach; ?>
+    									<div class="post_excerpt">
+    										<p><?php echo get_the_excerpt( $post_nav['post']->ID ); ?></p>
+    									</div>
+    								<?php } ?>
+    							</div>
+    						<?php endforeach; ?>
+                        </div>
 					</div>
 				</div>
 			</div>
