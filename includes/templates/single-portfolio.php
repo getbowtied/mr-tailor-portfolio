@@ -76,10 +76,6 @@ get_header();
     									<div class="post_header_date">
     										<?php echo get_the_date( 'F j, Y', $post_nav['post']->ID ); ?>
     									</div>
-
-    									<div class="post_excerpt">
-    										<p><?php echo get_the_excerpt( $post_nav['post']->ID ); ?></p>
-    									</div>
     								<?php } ?>
     							</div>
     						<?php endforeach; ?>
