@@ -257,8 +257,8 @@ if ( ! class_exists( 'MrTailorPortfolio' ) ) :
 
 endif;
 
-$theme = wp_get_theme();
-$parent_theme = $theme->parent();
-if( $theme->template == 'mrtailor' && ( $theme->version >= '2.9' || ( !empty($parent_theme) && $parent_theme->version >= '2.9' ) ) ) {
-	$mrtailor_portfolio = new MrTailorPortfolio;
-}
+add_action( 'after_setup_theme', function() {
+    if( function_exists('mrtailor_theme_version') ) {
+        $mrtailor_portfolio = new MrTailorPortfolio;
+    }
+} );
