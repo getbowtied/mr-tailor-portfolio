@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mr. Tailor Portfolio\n"
-"POT-Creation-Date: 2019-06-04 11:18+0300\n"
+"POT-Creation-Date: 2020-07-28 09:28+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,72 +17,72 @@ msgstr ""
 "esc_html_e;esc_html_x:1,2c;i18n;i18n.__\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.4\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: core\n"
 
-#: includes/blocks/portfolio/block.js:26 includes/portfolio/post-type.php:10
+#: includes/blocks/portfolio/block.js:25 includes/portfolio/post-type.php:10
 #: includes/portfolio/post-type.php:22 mrtailor-portfolio.php:107
 msgid "Portfolio"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:36
+#: includes/blocks/portfolio/block.js:35
 msgid "Equal Boxes"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:37
+#: includes/blocks/portfolio/block.js:36
 msgid "Masonry Style V1"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:38
+#: includes/blocks/portfolio/block.js:37
 msgid "Masonry Style V2"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:39
+#: includes/blocks/portfolio/block.js:38
 msgid "Masonry Style V3"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:217
+#: includes/blocks/portfolio/block.js:216
 msgid "Update"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:219
+#: includes/blocks/portfolio/block.js:218
 msgid "Updating"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:436
+#: includes/blocks/portfolio/block.js:435
 msgid "Categories:"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:451
+#: includes/blocks/portfolio/block.js:450
 msgid "Alphabetical Ascending"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:452
+#: includes/blocks/portfolio/block.js:451
 msgid "Alphabetical Descending"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:453
+#: includes/blocks/portfolio/block.js:452
 msgid "Date Ascending"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:454
+#: includes/blocks/portfolio/block.js:453
 msgid "Date Descending"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:456
+#: includes/blocks/portfolio/block.js:455
 msgid "Order By"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:475
+#: includes/blocks/portfolio/block.js:474
 msgid "Number of Portfolio Items"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:501
+#: includes/blocks/portfolio/block.js:500
 msgid "Show Filters?"
 msgstr ""
 
-#: includes/blocks/portfolio/block.js:517
+#: includes/blocks/portfolio/block.js:516
 msgid "Columns"
 msgstr ""
 
@@ -181,6 +181,10 @@ msgstr ""
 
 #: includes/portfolio/taxonomy.php:20
 msgid "No Portfolio Category found."
+msgstr ""
+
+#: includes/templates/single-portfolio.php:67
+msgid "Continue reading"
 msgstr ""
 
 #: mrtailor-portfolio.php:124
