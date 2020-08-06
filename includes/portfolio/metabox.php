@@ -17,30 +17,43 @@ function portfolio_options_meta_box_content()
     $portfolio_color_meta_box_value = isset($values['portfolio_color_meta_box']) ? esc_attr($values['portfolio_color_meta_box'][0]) : '';
     $selected = isset($values['page_header_transparency']) ? esc_attr( $values['page_header_transparency'][0]) : '';
     ?>
-         
-    <p>
-        <input type="checkbox" id="portfolio_title_meta_box_check" name="portfolio_title_meta_box_check" <?php checked( $check, 'on' ); ?> />
-        <label for="portfolio_title_meta_box_check">Hide Portfolio Item Title</label>
-    </p>
-    
-    <p><strong>Header Transparency</strong></p>
 
-    <p>
-        <select name="page_header_transparency" id="page_header_transparency" style="width:100%">
-            <option value="inherit" <?php selected( $selected, 'inherit' ); ?>>Inherit</option>
-            <option value="transparency_light" <?php selected( $selected, 'transparency_light' ); ?>>Light</option>
-            <option value="transparency_dark" <?php selected( $selected, 'transparency_dark' ); ?>>Dark</option>
-            <option value="no_transparency" <?php selected( $selected, 'no_transparency' ); ?>>No Transparency</option>
-        </select>
-    </p>
-    
-    <p>
-        <label for="portfolio_color_meta_box"><strong>Portfolio Item Color</strong></label><br /><br />
-        <input type="text" name="portfolio_color_meta_box" id="portfolio_color_meta_box" value="<?php echo esc_attr($portfolio_color_meta_box_value); ?>" />
-    </p>
-    
+    <div class="components-panel__row">
+        <div class="components-base-control">
+            <div class="components-base-control__field">
+                <span class="components-checkbox-control__input-container">
+                    <input type="checkbox" id="portfolio_title_meta_box_check" class="components-checkbox-control__input" name="portfolio_title_meta_box_check" <?php checked( $check, 'on' ); ?> />
+                </span>
+                <label for="portfolio_title_meta_box_check">Hide Portfolio Item Title</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="components-panel__row">
+        <div class="components-base-control header-transparency">
+            <label for="page_header_transparency" class="components-base-control__label">Header Transparency</label>
+            <div class="components-base-control__field">
+                <select name="page_header_transparency" id="page_header_transparency" style="width:100%">
+                    <option value="inherit" <?php selected( $selected, 'inherit' ); ?>>Inherit</option>
+                    <option value="transparency_light" <?php selected( $selected, 'transparency_light' ); ?>>Light</option>
+                    <option value="transparency_dark" <?php selected( $selected, 'transparency_dark' ); ?>>Dark</option>
+                    <option value="no_transparency" <?php selected( $selected, 'no_transparency' ); ?>>No Transparency</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="components-panel__row">
+        <div class="components-base-control">
+            <div class="components-base-control__field">
+                <label for="portfolio_color_meta_box">Portfolio Item Color</label>
+                <input type="text" name="portfolio_color_meta_box" id="portfolio_color_meta_box" value="<?php echo esc_attr($portfolio_color_meta_box_value); ?>" />
+            </div>
+        </div>
+    </div>
+
     <?php
-    
+
     // We'll use this nonce field later on when saving.
     wp_nonce_field( 'portfolio_options_meta_box', 'portfolio_options_meta_box_nonce' );
 }
@@ -52,18 +65,18 @@ function portfolio_options_meta_box_save($post_id)
 {
     // Bail if we're doing an auto save
     if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
-     
+
     // if our nonce isn't there, or we can't verify it, bail
     if( !isset( $_POST['portfolio_options_meta_box_nonce'] ) || !wp_verify_nonce( $_POST['portfolio_options_meta_box_nonce'], 'portfolio_options_meta_box' ) ) return;
-     
+
     // if our current user can't edit this post, bail
     if( !current_user_can( 'edit_post' ) ) return;
-    
+
     $chk = isset($_POST['portfolio_title_meta_box_check']) ? 'on' : 'off';
     update_post_meta( $post_id, 'portfolio_title_meta_box_check', $chk );
-    
+
     if( isset( $_POST['page_header_transparency'] ) )
     update_post_meta( $post_id, 'page_header_transparency', esc_attr( $_POST['page_header_transparency'] ) );
-    
+
     if( isset( $_POST['portfolio_color_meta_box'] ) ) update_post_meta( $post_id, 'portfolio_color_meta_box', wp_kses($_POST['portfolio_color_meta_box'], wp_kses_allowed_html('post') ) );
 }

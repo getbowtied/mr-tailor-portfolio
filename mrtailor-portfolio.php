@@ -166,12 +166,10 @@ if ( ! class_exists( 'MrTailorPortfolio' ) ) :
 		 * @return void
 		*/
 		public static function gbt_add_block() {
-			add_action( 'plugins_loaded', function() {
-				$registry = new WP_Block_Type_Registry;
-				if( !$registry->is_registered( 'getbowtied/mt-portfolio' ) ) {
-					include_once( 'includes/blocks/index.php' );
-				}
-			});
+			$registry = new WP_Block_Type_Registry;
+			if( !$registry->is_registered( 'getbowtied/mt-portfolio' ) ) {
+				include_once( 'includes/blocks/index.php' );
+			}
 		}
 
 		/**
