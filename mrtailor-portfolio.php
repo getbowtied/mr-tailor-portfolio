@@ -196,7 +196,7 @@ if ( ! class_exists( 'MrTailorPortfolio' ) ) :
 			add_action( 'wp_enqueue_scripts', function() {
 				wp_enqueue_script(
 					'gbt-mt-portfolio-scripts',
-					plugins_url( 'includes/assets/js/portfolio.js', __FILE__ ),
+					plugins_url( 'includes/assets/js/portfolio.min.js', __FILE__ ),
 					array('jquery'),
 					false,
 					true
@@ -215,7 +215,7 @@ if ( ! class_exists( 'MrTailorPortfolio' ) ) :
 					global $post_type;
 					wp_enqueue_script(
 						'gbt-mt-portfolio-admin-scripts',
-						plugins_url( 'includes/assets/js/wp-admin-portfolio.js', __FILE__ ),
+						plugins_url( 'includes/assets/js/wp-admin-portfolio.min.js', __FILE__ ),
 						array('wp-color-picker'),
 						false
 					);
