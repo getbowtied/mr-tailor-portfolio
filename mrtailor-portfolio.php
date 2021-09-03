@@ -4,13 +4,13 @@
  * Plugin Name:       		Mr. Tailor Portfolio Addon
  * Plugin URI:        		https://mrtailor.wp-theme.design/
  * Description:       		Extends the functionality of your WordPress site by adding a 'Portfolio' custom post type allowing you to organize and showcase you your work or products.
- * Version:           		1.1.6
+ * Version:           		1.1.7
  * Author:            		GetBowtied
  * Author URI:				https://getbowtied.com
  * Text Domain:				mr-tailor-portfolio
  * Domain Path:				/languages/
  * Requires at least: 		5.0
- * Tested up to: 			5.6
+ * Tested up to: 			5.8
  *
  * @package  Mr. Tailor Portfolio
  * @author   GetBowtied
